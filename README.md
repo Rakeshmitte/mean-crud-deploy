@@ -1,4 +1,4 @@
- 🚀 MEAN CRUD Task
+# 🚀 MEAN CRUD Task
 
 This repository contains a **MEAN stack (MongoDB, Express, Angular, Node.js)** CRUD application with **Docker-based deployment** and **CI/CD automation**.  
 The project demonstrates how to containerize the frontend and backend, manage services with Docker Compose, and deploy to a cloud VM (AWS EC2).  
