@@ -37,12 +37,7 @@ steps:
 
   - name: Deploy Frontend
     run: |
-      gcloud run deploy frontend \
-        --image asia-south1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/mean-crud-repo/frontend:${{ github.sha }} \
-        --region asia-south1 \
-        --platform managed \
-        --allow-unauthenticated \
-        --port 80
+      gcloud run deploy frontend --image asia-south1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/mean-crud-repo/frontend:${{ github.sha }} --region asia-south1 --platform managed --allow-unauthenticated --port 80
 
   - name: Build Backend
     run: |
@@ -54,10 +49,5 @@ steps:
 
   - name: Deploy Backend
     run: |
-      gcloud run deploy backend \
-        --image asia-south1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/mean-crud-repo/backend:${{ github.sha }} \
-        --region asia-south1 \
-        --platform managed \
-        --allow-unauthenticated \
-        --port 5000
+      gcloud run deploy backend --image asia-south1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/mean-crud-repo/backend:${{ github.sha }} --region asia-south1 --platform managed --allow-unauthenticated --port 5000
 ```
